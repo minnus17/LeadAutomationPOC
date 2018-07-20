@@ -1,0 +1,9 @@
+﻿.has-error {
+    border-color: red;
+    background-color: white;
+}
+
+.has-error-message {
+    color: red;
+    background-color: #fff;
+}

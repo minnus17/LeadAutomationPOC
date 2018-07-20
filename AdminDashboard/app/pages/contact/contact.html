@@ -1,0 +1,48 @@
+﻿<link href="css/mdb.css" rel="stylesheet" />
+<div>
+    <img src="app/pages/contact/css/logo.jpg" />
+</div>
+<form class="form-horizontal" name="websiteForm" role="form" ng-submit="submitForm(websiteForm.$valid)" autocomplete="off" novalidate>
+    <div class="md-form">
+        <div class="col-sm-3"></div>
+        <div>
+            <input type="text" id="name" name="name" class="form-control" ng-model="details.data.firstname" placeholder="Enter FullName (Required)" ng-class="{'data-error':websiteForm.name.$error.required && !websiteForm.name.$pristine}" required>
+            <span class="is-invalid" ng-show="websiteForm.name.$error.required && !websiteForm.name.$pristine">Name is required.</span>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div class="md-form">
+        <div>
+            <input type="text" id="company" class="form-control" ng-model="details.data.company" placeholder="Enter Company name" />
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div class="md-form">
+
+        <div>
+            <input type="text" id="contactNumber"  class="form-control" ng-model="details.data.contactnumber" placeholder="Enter Contact Number" />
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+    <div class="md-form">
+
+        <div>
+            <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" ng-model="details.data.email" placeholder="Enter email (Required)" ng-class="{'has-error':websiteForm.inputEmail.$error.required && !websiteForm.inputEmail.$pristine}" required>
+            <span class="is-invalid" ng-show="websiteForm.inputEmail.$error.required && !websiteForm.inputEmail.$pristine">Invalid Email.</span>
+
+        </div>
+
+    </div>
+
+    <div class="md-form">
+
+        <div>
+            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" ng-model="details.data.message"></textarea>
+        </div>
+    </div>
+    <div class="float-right"><button type="submit" class="btn btn-primary">Submit</button></div>
+
+</form>

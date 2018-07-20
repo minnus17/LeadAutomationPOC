@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">  
+    <title>Admin Area</title>
+    <!-- Bootstrap core JavaScript-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap core and CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />     
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!--Angular scripts-->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <script src="scripts/angular-aria.js"></script>
+    <script src="scripts/angular-material.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/pages/about/about.js"></script>
+    <script src="app/pages/contact/contact.js"></script>
+    <script src="app/pages/contact/contactformService.js"></script>
+    <script src="app/pages/graph/graph.js"></script>
+    <script src="app/pages/whitepapersubscription/whitepapersubscription.js"></script>
+</head>
+<body ng-app="samplespa">
+
+    <!--Navbar-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">ApplicationName</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!/graph">Graphs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!/contact">ContactUs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#!/whitepapersubscription">Whitepaper Subscription</a>
+                    </li>
+                </ul>                
+            </div>
+        </nav>
+
+    </header>
+   
+<!--Different Views appear here-->
+    <section class="container container-style" id="body">
+        <div ng-view></div>
+    </section>
+
+    
+    
+</body>
+</html>
